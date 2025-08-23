@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimeric Vaccine Design</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section with Project Title -->
+    <header class="bg-green-700 text-white py-12 px-4 md:px-8 text-center shadow-lg">
+        <h1 class="text-2xl md:text-4xl font-bold tracking-tight mb-2">DESIGNING A CHIMERIC VACCINE AGAINST CANNINE DISTEMPER VIRUS USING IMMUNOINFORMATICS TOOLS</h1>
+        <p class="text-base md:text-lg font-light">Tharun H - Master of Science in Bioinformatics</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center space-x-2 sm:space-x-6 py-3 text-sm sm:text-base">
+                <li><a href="#abstract" class="hover:text-green-300 transition-colors duration-300">Abstract</a></li>
+                <li><a href="#introduction" class="hover:text-green-300 transition-colors duration-300">Introduction</a></li>
+                <li><a href="#methodology" class="hover:text-green-300 transition-colors duration-300">Methodology</a></li>
+                <li><a href="#results" class="hover:text-green-300 transition-colors duration-300">Results</a></li>
+                <li><a href="#discussion" class="hover:text-green-300 transition-colors duration-300">Discussion</a></li>
+                <li><a href="#conclusion" class="hover:text-green-300 transition-colors duration-300">Conclusion</a></li>
+                <li><a href="#references" class="hover:text-green-300 transition-colors duration-300">References</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 md:px-8 py-8 md:py-12">
+
+        <!-- Abstract Section -->
+        <section id="abstract" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Abstract</h2>
+            <p class="text-gray-700 leading-relaxed">The canine distemper virus is a highly contagious disease affecting a wide range of domestic and wild animals. This virus belongs to the family Paramyxoviridae, containing a negative-strand RNA. The disease is often fatal with a high mortality rate. The current study aims to design a vaccine against the virus employing reverse vaccinology. The target candidates for the vaccine design are the surface proteins Hemagglutinin and Nucleocapsid. The project uses various online web servers and databases to identify, screen, and link these epitopes to create a chimeric vaccine construct. Molecular docking and dynamics analyses affirmed the robust binding affinity of the vaccine construct to the pathogenic toll-like receptor four (TLR4). This in-silico approach provides a path for the development of a safe, stable, and effective viral vaccination.</p>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Introduction</h2>
+            <p class="text-gray-700 leading-relaxed">Canine distemper virus (CDV) is a highly contagious disease that affects a wide range of domestic and wild animals, particularly dogs. CDV belongs to the family Paramyxoviridae, within the genus Morbillivirus, and primarily targets the respiratory, gastrointestinal, and nervous systems, causing severe illness and often leading to death. Recent studies have employed various molecular and pathological methods to investigate the prevalence and genetic characteristics of CDV. Understanding the mechanisms of CDV infection is crucial for designing effective preventive strategies. The Hemagglutinin (H) and Nucleocapsid (N) proteins have been identified as potential targets due to their stability and immunogenicity. In contrast to conventional procedures, modern methodologies like reverse vaccinology and immunoinformatics provide safer and more potent substitutes by creating stable, multi-epitope vaccinations that can trigger specific immune reactions. This report provides a comprehensive overview of CDV research, focusing on the latest advancements in diagnosis, genetic characterization, and vaccine development.</p>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Methodology</h2>
+            <ul class="list-none space-y-4 text-gray-700 leading-relaxed">
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">1. Protein Sequence Retrieval</h3>
+                    <p>Protein sequences for the Hemagglutinin (H) and Nucleocapsid (N) proteins of the Canine Distemper Virus (CDV) were identified and retrieved from the NCBI and UniProt databases. These sequences were used as the basis for all subsequent analysis.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">2. Multiple Sequence Alignment (MSA)</h3>
+                    <p>MSA was performed using the Clustal Omega online server to identify highly conserved regions within the protein sequences, ensuring that the selected peptides would be effective against multiple strains of the virus.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">3. Subcellular Localization</h3>
+                    <p>The DeepTMHMM server was used to predict the subcellular location of the proteins. Only those located on the outer-membrane or extracellular regions were selected for further analysis, as they are accessible to the host immune system.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">4. Epitope Prediction & Immunogenicity Analysis</h3>
+                    <p>B-cell and T-cell epitopes were predicted using the Immune Epitope Database (IEDB). The selected epitopes were then filtered based on their properties using various tools:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li><strong>VaxiJen:</strong> For antigenicity (threshold > 0.5).</li>
+                        <li><strong>Allergen FP:</strong> For non-allergenicity.</li>
+                        <li><strong>ToxinPred:</strong> For non-toxicity.</li>
+                        <li><strong>IFN-γ Epitope Server:</strong> For their ability to induce Interferon-gamma.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">5. Vaccine Construct Design</h3>
+                    <p>A chimeric vaccine was constructed by linking the prioritized T-cell epitopes. The AAY linker was used for CTL epitopes and the GPGPG linker for HTL epitopes. A 50S ribosomal protein was added as an adjuvant at the N-terminus using an EAAAK linker to boost the immune response.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">6. In-silico Analysis and Validation</h3>
+                    <p>The designed construct was subjected to a series of computational validations:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li><strong>Physicochemical Properties:</strong> Analyzed with ProtParam to determine stability, solubility, and other properties.</li>
+                        <li><strong>Structure Prediction:</strong> Secondary and tertiary structures were predicted using PSIPRED and MolProbity, with the latter validating the 3D model.</li>
+                        <li><strong>Molecular Docking:</strong> Performed with the HADDOCK server to confirm the vaccine's binding affinity to key immune receptors like TLR4 and MHCs.</li>
+                        <li><strong>Immune Simulation:</strong> The C-ImmSim server was used to simulate the immune response, predicting a robust reaction.</li>
+                        <li><strong>Codon Optimization:</strong> Codons were optimized using the JCAT server for expression in *E. coli* with a high CAI value.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Results</h2>
+            <p class="text-gray-700 leading-relaxed">The study successfully designed a chimeric vaccine candidate against Canine Distemper Virus. The analysis of physicochemical properties showed that the vaccine construct is stable (instability index of 30.94) and soluble (solubility score of 0.5389). The secondary and tertiary structures were successfully predicted, with a Ramachandran plot validation showing that 94.61% of amino acids were in the favorable region, indicating a high-quality model. Molecular docking simulations confirmed a strong binding affinity between the vaccine construct and the TLR4 and MHC receptors. The in-silico immune simulation using the C-ImmSim server predicted a robust immune response, characterized by a significant increase in B-cell and T-cell populations, and the production of various antibodies and cytokines. Codon optimization for expression in *E. coli* resulted in an optimal Codon Adaptation Index (CAI) of 1.0 and a GC content of 51.30%, suggesting a high likelihood of successful protein expression.</p>
+        </section>
+
+        <!-- Discussion Section -->
+        <section id="discussion" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Discussion</h2>
+            <p class="text-gray-700 leading-relaxed">Our study successfully designed and evaluated a chimeric vaccine against Canine Distemper Virus using advanced bioinformatics tools, overcoming the limitations of traditional vaccine development. This in-silico approach allowed for the selection of highly antigenic, non-allergenic, and non-toxic epitopes, which were then combined into a single, stable construct. The robust binding affinity to immune receptors, as shown by molecular docking, and the predicted strong immune response from in-silico simulation highlight the potential efficacy of this vaccine candidate. By using selected epitopes instead of the entire virus, the risk of reversion to virulence is eliminated, providing a safer alternative to existing vaccines. The results suggest that this approach could be a game-changer for CDV prevention, offering a cost-effective and time-efficient method for developing new vaccines. While the in-silico results are promising, future work will require experimental validation to confirm the vaccine's safety and efficacy in animal models.</p>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">Conclusion</h2>
+            <p class="text-gray-700 leading-relaxed">In conclusion, the development of a chimeric vaccine against Canine Distemper Virus (CDV) using immunoinformatics represents a significant advancement. This study successfully leveraged computational methods to design a multi-epitope vaccine targeting the hemagglutinin and nucleocapsid proteins. The in-silico analysis demonstrated that the constructed vaccine is safe, stable, and capable of inducing a robust immune response. By utilizing a reverse vaccinology approach, this project offers a promising strategy to address the limitations of traditional vaccines, paving the way for more efficient and targeted immunization strategies. The findings, while requiring experimental validation, suggest that this vaccine could be a powerful tool for improving disease control and reducing morbidity and mortality in affected species.</p>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="section-padding bg-white rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-green-700 mb-4 border-b-2 border-green-500 pb-2">References</h2>
+            <ol class="list-decimal list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>Schmidt, M.R., et al. (2012). Long-Term and Memory Immune Responses in Mice against Newcastle Disease Viruslike Particles Containing Respiratory Syncytial Virus Glycoprotein Ectodomains. J. Virol.</li>
+                <li>Griffiths, C., et al. (2017). Respiratory Syncytial Virus: Infection, Detection, and New Options for Prevention and Treatment. Clin. Microbiol. Rev.</li>
+                <li>ul Qamar, M., et al. (2020). Multiepitope-Based Subunit Vaccine Design and Evaluation against Respiratory Syncytial Virus Using Reverse Vaccinology Approach. Vaccines.</li>
+                <li>Collins, P.L., et al. (2013). Respiratory Syncytial Virus: Virology, Reverse Genetics, and Pathogenesis of Disease. In Challenges and Opportunities for Respiratory Syncytial Virus Vaccines.</li>
+                <li>Graham, B.S. (2011). Biological challenges and technological opportunities for respiratory syncytial virus vaccine development. Immunol. Rev.</li>
+                <li>Oyarzun, P., et al. (2015). A Bioinformatics Tool for Epitope-Based Vaccine Design That Accounts for Human Ethnic Diversity: Application to Emerging Infectious Diseases. Vaccine.</li>
+                <li>Patronov, A., & Doytchinova, I. (2013). T-Cell Epitope Vaccine Design by Immunoinformatics. Open Biol.</li>
+                <li>Kumar, V. (2018). Toll-like receptors in immunity and inflammatory diseases: Past, present, and future. International Immunopharmacology.</li>
+                <li>And many more from the original report...</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer class="bg-green-700 text-white text-center py-6 px-4">
+        <p>&copy; 2024 Canine Distemper Vaccine Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
