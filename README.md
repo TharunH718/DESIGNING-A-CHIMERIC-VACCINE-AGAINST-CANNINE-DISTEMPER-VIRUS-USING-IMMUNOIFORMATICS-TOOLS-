@@ -1,6 +1,5 @@
 #  DESIGNING A CHIMERIC VACCINE AGAINST CANNINE DISTEMPER VIRUS USING IMMUNOINFORMATICS TOOLS
-
-## Project Overview: 
+## 📌 Project Overview
 This project uses an immunoinformatics approach, also known as reverse vaccinology, to design a multi-epitope chimeric vaccine against the highly contagious Canine Distemper Virus (CDV). CDV is a virus that affects dogs and other animals, targeting their respiratory, gastrointestinal, and nervous systems, and is often fatal with a high mortality rate. The study focuses on two key surface proteins of the virus, 
 Hemagglutinin (H) and Nucleocapsid (N), as the target candidates for the vaccine. The report details the use of various bioinformatics tools and databases to identify, screen, and link these epitopes to create a single vaccine construct. The ultimate goal is to create a safer, more stable, and more effective vaccine than traditional methods by eliminating the risks associated with using the whole virus.
 
@@ -12,3 +11,7 @@ Physicochemical Properties: Analysis showed the vaccine is stable (instability i
 Structure and Docking: The 3D structure was modeled and validated, showing high quality with 94.61% of amino acids in the favorable region. Molecular docking confirmed a strong binding affinity to the TLR4 and MHC immune receptors.
 Immune Simulation: The C-ImmSim server predicted that the vaccine would elicit a robust immune response, generating a rise in T cells, B cells, and various antibodies and cytokines.
 Codon Optimization: Codons were optimized for expression in E. coli, resulting in a high Codon Adaptation Index (CAI) of 1.0 and a GC content of 51.30%.
+
+## Live Project 
+Here is the link to my live project 
+**[DESIGNING A CHIMERIC VACCINE AGAINST CANNINE DISTEMPER VIRUS USING IMMUNOINFORMATICS TOOLS]()
